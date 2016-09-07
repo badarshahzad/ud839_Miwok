@@ -94,5 +94,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(phrasesIntent);
             }
         });
+
+        // Find the View that shows the kaka category
+        TextView kaka = (TextView) findViewById(R.id.kaka);
+
+        //Set a Click listener on that View
+        kaka.setOnClickListener(new OnClickListener(){
+            //The code in thsi method will be executed when the kaka category is clicked on.
+            @Override
+            public void onClick(View v) {
+                //Create a new intent to open the KakaActivity
+                Intent kakaIntent = new Intent(MainActivity.this,KakaActivity.class);
+
+                //Start the new activity
+                startActivity(kakaIntent);
+            }
+        });
     }
 }
